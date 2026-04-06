@@ -1,6 +1,8 @@
 (function () {
     // 1. Identify the absolute backend URL, assuming the script is loaded from the very same domain.
     // Ensure that you change this value when you deploy!
+    // ⚠️ PRODUCTION: Replace with your Vercel deployment URL before embedding
+    // e.g., const baseUrl = 'https://technodexterous-chatbot.vercel.app';
     const baseUrl = 'http://127.0.0.1:5000';
 
     // 2. We inject the chatbot toggle floating button
