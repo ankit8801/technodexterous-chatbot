@@ -2,6 +2,8 @@
 
 > An embeddable, modular AI support chatbot built for the [TechnoDexterous](https://technodexterous.com) platform — designed to deliver instant, intelligent automated assistance for course inquiries, internship guidance, and platform onboarding without any backend dependency on a third-party AI service.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-technodexterous--chatbot.vercel.app-3b82f6?style=for-the-badge&logo=vercel&logoColor=white)](https://technodexterous-chatbot.vercel.app/)
+
 ---
 
 ## 📌 Overview
@@ -191,11 +193,11 @@ The chatbot is delivered as a single JavaScript asset. To integrate it on any pa
 
 **1. Deploy the backend** to a hosting provider (e.g., Render, Railway, AWS EC2, Heroku).
 
-**2. Update the `baseUrl`** in `static/chatbot-widget.js` to point to your deployed backend:
+**2. Update the `baseUrl`** in `static/chatbot-widget.js` to point to the deployed backend:
 
 ```js
 // static/chatbot-widget.js — Line 4
-const baseUrl = 'https://your-deployed-backend.com';
+const baseUrl = 'https://technodexterous-chatbot.vercel.app';
 ```
 
 **3. Add the script tag** to the target page's HTML, just before `</body>`:
