@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoDexterous Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="bot-avatar-wrapper">
+                    <div class="bot-avatar">TD</div>
+                    <div class="status-indicator"></div>
+                </div>
+                <div class="header-text">
+                    <h2>TechnoDexterous Assistant</h2>
+                    <p>Always online to help you</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot">
+                <div class="msg-bubble">
+                    Hi! I’m your TechnoDexterous AI assistant. How can I help you excel today?
+                </div>
+            </div>
+        </div>
+        <!-- Menu Bar for persistent quick actions -->
+        <div class="chat-menu">
+            <button class="menu-btn" onclick="sendMenuOption('Courses')">📚 Courses</button>
+            <button class="menu-btn" onclick="sendMenuOption('Internships')">💼 Internships</button>
+            <button class="menu-btn" onclick="sendMenuOption('Getting Started')">🚀 Getting Started</button>
+            <button class="menu-btn" onclick="sendMenuOption('FAQs')">❓ FAQs</button>
+        </div>
+        <div class="chat-footer">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Ask me something..." onkeypress="handleKeyPress(event)"
+                    autocomplete="off">
+            </div>
+            <button id="send-btn" onclick="sendMessage()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
